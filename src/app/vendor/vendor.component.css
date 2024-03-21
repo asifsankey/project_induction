@@ -651,6 +651,45 @@ color: #21AC27;
     margin-bottom: 2%;
 }
 
+.mainpop span{
+    background-color: white;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    font-size: 1.2em;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    height: 1em;
+    width: 1em;
+
+}
+
+.mainpop span:hover{
+    cursor: pointer;
+}
+
+.subpop img{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    height: 30em;
+    width: 30em;
+
+}
+
+.mainpop{
+    position: relative;
+    z-index: 1;
+    border: none !important;
+    position: fixed;
+    top: 1%;
+    bottom: 2%;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+
+}
+
 @media only screen and (min-width: 1024px) and (max-width:1200px){
     .wdth{
         width: 60%;
@@ -708,6 +747,16 @@ color: #21AC27;
 
     .imb{
         width: 99.5%;
+    }
+
+    .subpop img{
+        top: 10%;
+        left: 10%;
+    }
+
+    .maintop span{
+        top: 2%;
+        right: 5%;
     }
 
 }
@@ -884,42 +933,18 @@ color: #21AC27;
     .fnbtn{
         font-size: 0.7rem;
     }
+
+    .subpop img{
+        top: 20%;
+        left: 2%;
+        
+    }
+
+    .maintop span{
+        top: 3%;
+        right: 3%;
+    }
 }
 
-.mainpop{
-    position: relative;
-    z-index: 1;
-    border: none !important;
-    position: fixed;
-    top: 1%;
-    bottom: 2%;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
 
-}
 
-.mainpop span{
-    background-color: white;
-    position: absolute;
-    right: 1%;
-    top: 1%;
-    font-size: 1.2em;
-    text-align: center;
-    color: #000000;
-    font-weight: bold;
-    height: 1em;
-    width: 1em;
-
-}
-
-.mainpop span:hover{
-    cursor: pointer;
-}
-
-.subpop img{
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    height: 30em;
-    width: 30em;
-}

@@ -27,19 +27,19 @@ export class VendorComponent implements OnInit {
     }
     return value; // If it's already an array, return as is
   }
-  v1:any;
+  // v1:any;
 
 
-  receivedData: any[] = [];
-@ViewChildren('itemDiv') itemDivs!: QueryList<any>;
-ngAfterViewInit(): void {
-  this.itemDivs.forEach((itemDiv, index) => {
-    const data = itemDiv.nativeElement.innerText;
-    console.log('Received data:', data);
-    this.receivedData[index] = data; // Replace the previous data with the new data
-    // You can perform any operation with the data here
-  });
-}
+// receivedData: any[] = [];
+// @ViewChildren('itemDiv') itemDivs!: QueryList<any>;
+// ngAfterViewInit(): void {
+//   this.itemDivs.forEach((itemDiv, index) => {
+//     const data = itemDiv.nativeElement.innerText;
+//     console.log('Received data:', data);
+//     this.receivedData[index] = data; // Replace the previous data with the new data
+//     // You can perform any operation with the data here
+//   });
+// }
 
   isArray(value: any): boolean {
     return Array.isArray(value);

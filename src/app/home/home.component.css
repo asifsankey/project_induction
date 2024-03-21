@@ -72,3 +72,28 @@
     border: 1px solid #D3D3D3;
    
 }
+
+@media only screen and (min-width: 321px) and (max-width:640px){
+
+    .titl{
+        font-size: 1rem;
+
+    }
+
+    .hdr{
+        font-size: 0.8rem;
+    }
+    .rows{
+        font-size: 0.7rem;
+    }
+
+    .searchcont{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+    }
+    .searchcont button{
+        width: 15%;
+    }
+}

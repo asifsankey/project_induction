@@ -1,17 +1,19 @@
 
 <div class="bd">
-  <div class="searchcont">
-    <input type="text" placeholder="Enter vender code" [(ngModel)]="search">
-    <button type="button">Search</button>
-  </div>
+
+  <form class="searchcont" ngNativeValidate (ngSubmit)="searchele()">
+    <input type="text" placeholder="Enter Package ID" name="search" [(ngModel)]="search" required>
+    <button type="submit">Search</button>
+  </form>
+    
   <div class="titl">
     <p>Table of contents</p>
   </div>
 <div class="preview">
   
   <div class="col1">
-    <div class="hdr">Vender Code</div>
-    <div class="rows" *ngFor="let x of vendorCodes" (click)="navigateto(x)">
+    <div class="hdr">Package ID</div>
+    <div class="rows" *ngFor="let x of printingid" (click)="navigateto(x)">
       {{x}}
     </div>
   </div>

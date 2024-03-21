@@ -1,6 +1,6 @@
 {
     "data": {
-      "R12345": {
+      "123456783": {
         "supplierDetails": {
           "companyName": "XYZ SYSTEMS LTD",
           "companyAddress": "Thane",
@@ -61,7 +61,7 @@
         }
       },
   
-      "R12356": {
+      "123456786": {
         "supplierDetails": {
           "companyName": "XYZ SYSTEMS LTD",
           "companyAddress": "Thane",
@@ -104,7 +104,7 @@
             "Labels (Quantity / Location)",
             "Container Ownership"
           ],
-          "primaryPackaging": ["-", "-", "-", "-", "-", "-", "-", ["-", "-", "-"], ["-", "-"], ["-", "-"], "-"],
+          "primaryPackaging": ["-", "-", "-", "-", "-", "-", "-", ["200", "300", "400"], ["-", "-"], ["-", "-"], "-"],
           "secondaryPackaging": ["5", "Returnable", "NA", "Tree Bin Bag", "Tree Bin Bag", "Remarks", "2.19", ["600", "400", "180"], ["Yes", "Xyz"], ["2", "Adjacent Side"], "XYZ"]
         },
         "data3": {
@@ -118,7 +118,7 @@
           "Date": ["23/02/2024", "23/02/2024", "23/02/2024"]
         }
       },
-      "R12357": {
+      "123456785": {
         "supplierDetails": {
           "companyName": "XYZ SYSTEMS LTD",
           "companyAddress": "Mumbai",
@@ -176,7 +176,7 @@
         }
       },
   
-      "R12348": {
+      "123456784": {
         "supplierDetails": {
           "companyName": "XYZ SYSTEMS LTD",
           "companyAddress": "Mumbai",
@@ -234,7 +234,7 @@
         }
       },
   
-      "R12349": {
+      "123456789": {
         "supplierDetails": {
           "companyName": "XYZ SYSTEMS LTD",
           "companyAddress": "Pune",

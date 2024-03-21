@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { VendorComponent } from './vendor/vendor.component';
 import { HomeComponent } from './home/home.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -23,10 +25,20 @@ import { HomeComponent } from './home/home.component';
    
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,  
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000, 
+      positionClass: 'toast-top-right', 
+      preventDuplicates: true, 
+      closeButton: true, 
+      progressBar: true, 
+      progressAnimation: 'decreasing'
+    
+    })
   ],
   providers: [ApicallService],
   bootstrap: [AppComponent]
