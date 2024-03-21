@@ -1,0 +1,300 @@
+
+<div class="body1">
+  <div class="btn1spt">
+    <button (click)="goToHomePage()" class="btn1">
+    </button>
+    <div class="txt1">Details/<span class="txtspn">123456789</span></div>
+  </div>
+  <div class="conthd">
+    <div class="cntl">
+      View Details
+    </div>
+    <div class="cntr">
+     <span> XYZ PACKAGING</span>
+    </div>
+  </div>
+  
+
+
+  <div class="mainbd">
+    <div class="submain">
+      <div class="maintop">
+        <div class="spl2">
+          <div class="img2">
+            <img src="../assets/images/logonew.jpg" alt="xyz image">
+          </div>
+          <div class="pretable1">
+            <p>Supplier Information <span>(Shipping)</span></p>
+            <div class="table1">
+              <div class="supplier-container wdth">
+                <div>Company Name</div>
+                <div>{{post[vendorCode].supplierDetails.companyName}}</div>
+                <div>Company Address</div>
+                <div>{{post[vendorCode].supplierDetails.companyAddress}}</div>
+                <div>Pkg Person Contact Name</div>
+                <div>{{post[vendorCode].supplierDetails.pkgPersonName}}</div>
+                <div>Email</div>
+                <div>{{post[vendorCode].supplierDetails.email}}</div>
+              </div>
+   
+              <div class="supplier-container wdth2">
+                <div>Vendor Code</div>
+                <div>{{post[vendorCode].supplierDetails.vendorCode}}</div>
+                <div>State, Country</div>
+                <div>{{post[vendorCode].supplierDetails.stateCountry}}</div>
+                <div>Tel No</div>
+                <div>{{post[vendorCode].supplierDetails.telNo}}</div>
+                <div>Fax No</div>
+                <div>{{post[vendorCode].supplierDetails.faxNo}}</div>
+              </div>
+          </div>
+        </div>
+        </div>
+        <div class="middle">
+            <div class="m1"><p>Approval Type </p><span>{{post[vendorCode].t2.Approval}}</span></div>
+            <div class="m2"><p>Status </p><span>{{post[vendorCode].t2.Status}}</span></div>
+            <div class="m3"><p>Date of Approval </p><span>{{post[vendorCode].t2.Date}}</span></div>
+            
+        </div>
+        <div class="titl1 hdall">
+          1. Program and Part Information  
+        </div>
+        <div class="table2">
+          <div class="t2l">
+            <div>XYZ Company Receving Location</div>
+            <div>{{post[vendorCode].t3.receiverLocation}}</div>
+            <div>ABC Part No.</div>
+            <div>{{post[vendorCode].t3.partNo}}</div>
+            <div>ABC Part Description</div>
+            <div>{{post[vendorCode].t3.part_desc}}</div>
+            <div>Part Weight (Kg)</div>
+            <div>{{post[vendorCode].t3.partWeight}}</div>
+          </div>
+          <div class="t2l">
+            <div>Part Dimension (L X W X H) (mm)</div>
+            <div>{{post[vendorCode].t3.partDimension[0]}} X {{post[vendorCode].t3.partDimension[1]}} X
+              {{post[vendorCode].t3.partDimension[2]}}</div>
+            <div>Annual Volume (Projected)</div>
+            <div>{{post[vendorCode].t3.volume}}</div>
+            <div>No. of parts per vehicle</div>
+            <div>{{post[vendorCode].t3.partPerVehicle}}</div>
+            <div>Models Applicable</div>
+            <div>{{post[vendorCode].t3.modelsApplicable}}</div>
+          </div>
+
+        </div>
+
+        <div class="imgtblh">
+          2. Visual References (Part & Packaging)
+        </div>
+          <div class="imgcontainer">
+            
+            <div class="imageblock" *ngFor="let i of [0, 1, 2]" (click)="popup1(true,i)">
+              <div class="imh" c>3.{{i+1}} - Part</div>
+              <div class="imb"><img src={{post[vendorCode].imgblock.imgpath[i]?post[vendorCode].imgblock.imgpath[i]:defaultImg}} alt="someimg"></div>
+            </div>
+                
+              
+           
+          </div>
+        
+          <div class="forthcont">
+            <h4 class="hdall">3. Packaging Information</h4>
+            <div class="bigcontainer1">
+              <div class="column1">
+                <p>Specifications</p>
+                <div class="spec_types" *ngFor="let spec_data of post[vendorCode].data1.Specifications">{{spec_data}}</div>
+              </div>
+              <div class="column">
+                <p>Primary Packaging</p>
+                  <ng-container  *ngFor="let xyz of post[vendorCode].data1.primaryPackaging">
+              <div class="spec_contain" *ngIf="!isArray(xyz); else notok">
+                {{xyz}}
+              </div>
+              <ng-template #notok>
+                <ng-container *ngIf="toArray(xyz).length===3; else lolen">
+                  <div class="spec_contain inside2">
+                    <div class="in" *ngFor="let x of toArray(xyz)">
+                      {{x}}
+                    </div>
+                  </div>
+                </ng-container>
+              </ng-template>
+              <ng-template #lolen>
+                <div class="spec_contain rinside2">
+                  <ng-container class="rinside2" *ngFor="let x of toArray(xyz);let i = index">
+                    <ng-container *ngIf="i == 0">
+                      <div class="in1">{{x}}</div>
+                    </ng-container>
+                    <ng-container *ngIf="i == 1 ">
+                      <div class="in2">{{x}}</div>
+                    </ng-container>
+                  </ng-container>
+                </div>
+              </ng-template>
+            </ng-container>
+               
+              </div>
+              <div class="column">
+                <p>Secondary Packaging</p>
+                <ng-container *ngFor="let xyz of post[vendorCode].data1.secondaryPackaging">
+            <div class="spec_contain" *ngIf="!isArray(xyz); else notok">
+              {{xyz}}
+            </div>
+            <ng-template #notok>
+              <ng-container *ngIf="toArray(xyz).length===3; else lolen">
+                <div class="spec_contain inside2">
+                  <div class="in" *ngFor="let x of toArray(xyz)">
+                    {{x}}
+                  </div>
+                </div>
+              </ng-container>
+            </ng-template>
+            <ng-template #lolen>
+              <div class="spec_contain rinside2">
+                <ng-container class="rinside2" *ngFor="let x of toArray(xyz);let i = index">
+                  <ng-container *ngIf="i == 0">
+                    <div class="in1">{{x}}</div>
+                  </ng-container>
+                  <ng-container *ngIf="i == 1 ">
+                    <div class="in2">{{x}}</div>
+                  </ng-container>
+                </ng-container>
+              </div>
+            </ng-template>
+          </ng-container>
+              </div>
+            </div>
+          </div>
+          <div class="flex-column">
+            <p class="hdall h6re">4. Shipping & Logistics</p>
+            
+              <div class="tbl4cont">
+                <div class="columntb41">
+                  <p>Vehicle type/size</p>
+                  <ng-container *ngFor="let x of post[vendorCode].data3.Vehicle">
+                    <div class="rowtb4">
+                      {{x}}
+                    </div>
+                  </ng-container>
+                </div>
+                
+                <div class="columntb42">
+                  <p>Closed XYZ</p>
+                  <ng-container *ngFor="let x of post[vendorCode].data3.Closed">
+                  <ng-container *ngIf="x !== 'Batch Lot'; else fru">
+                    <div class="rowtb42" *ngIf="!isArray(x); else notok2">
+                      {{x}}
+                    </div>
+                  </ng-container>
+                    <ng-template #notok2>
+                      <ng-container>
+                        <div class="subdivtb41">
+                          <div class="subinside" *ngFor="let x1 of toArray(x)">
+                            {{x1}}
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-template>
+                    <ng-template #fru>
+                      <div class="capin">
+                        {{x}}
+                      </div>
+                    </ng-template>
+                  </ng-container>
+                </div>
+
+                
+                <div class="columntb43">
+                    <p>Theoretical XYZ Utilisation</p>
+                    <ng-container *ngFor="let x of post[vendorCode].data3.Theoretical; let i = index">
+                      <ng-container *ngIf="!isConsecutiveDuplicate(x, i); else notsame">
+                        <div class="rowtb43" *ngIf="i !== 0 && !isArray(x) && x !== ' '; else notok2">
+                          
+                          {{ x }}
+                          
+                        </div>
+                      </ng-container>
+                      
+                      <ng-template #notok2>
+                        <ng-container *ngIf="i !== 0; else tiru">
+                        <ng-container *ngIf="x !== ' '; else ftiru">
+                        <div class="subdivtb4">
+                          <div class="subinside" *ngFor="let x1 of toArray(x)">
+                            {{ x1 }}
+                          </div>
+                        </div>
+                        </ng-container>
+                        </ng-container>
+                      </ng-template>
+                      
+                      <ng-template #notsame>
+                        
+                        <ng-container *ngIf="incrementRowSpanValue()"></ng-container> 
+                      </ng-template>
+                      <ng-template #tiru>
+                        <div class="espandingrow">
+                          {{x}}
+                        </div>
+                        <ng-container *ngIf="incrementRowSpanValue()"></ng-container> 
+                      </ng-template>
+
+                      <ng-template #ftiru>
+                        <div class="smallespandrow">
+                          {{x}}
+                        </div>
+                      </ng-template>
+                    </ng-container>
+                  
+                  </div>
+                  
+                </div>
+              </div>
+            <div class="txtbox">
+              <p class="hdall">5. Miscellaneous Comment</p>
+              <input type="text">
+            </div>
+            <div class="sixthcont">
+              <div class="hding hdall">
+                6. Approval information
+              </div>
+              <div class="bdcont6">
+               <div class="row3-1"><p>Department/Function</p> 
+
+                <div class="column3 column31clr" *ngFor="let y of post[vendorCode].data4.Department">
+                  {{y}}
+                </div>
+                </div>
+                <div class="row3"><p>Name</p>
+                <div class="column3 column3clr" *ngFor="let y of post[vendorCode].data4.Name">
+                  {{y}}
+                </div>
+                </div>
+                <div class="row3"><p>Date</p>
+                <div class="column3 column3clr" *ngFor="let y of post[vendorCode].data4.Date">
+                  {{y}}
+                </div>
+                </div>
+              </div>
+              </div>
+            <div class="btncont">
+              <button class="fnbtn">DOWNLOAD</button>
+            </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mainpop" *ngIf="con">
+    <span (click)="popup1(false,0)">&times;</span>
+    <div class="subpop">
+        <img src={{post[vendorCode].imgblock.imgpath[indexno]?post[vendorCode].imgblock.imgpath[indexno]:defaultImg}}>
+    </div>
+</div>
+
+
+
+   
+
+  

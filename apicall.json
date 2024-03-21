@@ -1,0 +1,12 @@
+{
+    "supplierDetails":{
+    "companyName":["XYZ SYSTEMS LTD","XYZ SYSTEMS LTD","GGF SYSTEMS LTD","FSC SYSTEMS LTD","FSC SYSTEMS LTD"],
+    "companyAddress":["Thane","Thane","Mumbai","Mumbai","Pune"],
+    "pkgPersonName":["Sanket Pawar","Mohammed Kaif","Mohammed Asif","Shubham Pawar","Yash Pawar"],
+    "email":["Sanket.Pawar@gmail.com","Mohammed.Kaif@gmail.com","Mohammed.Asif@gmail.com","Shubham.Pawar@gmail.com","Yash.Pawar@gmail.com"],
+    "vendorCode":["R12345","R12356","R12357","R12348","R12349"],
+    "stateCountry":["MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA"],
+    "telNo":["Q5","Q6","Q7","Q8","Q9"],
+    "faxNo":["Q5","Q6","Q7","Q8","Q9"]
+  }
+}

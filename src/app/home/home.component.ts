@@ -1,27 +1,42 @@
 import { Component } from '@angular/core';
-import { ApicallService } from './services/apicall.service';
+import { ApicallService } from '../services/apicall.service';
 import { Router } from '@angular/router';
 
-
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class AppComponent {
+export class HomeComponent {
+
   title = 'trial3';
   post:any={};
+  vendorCodes: string[] = [];
+  pkgPersonNames: string[] = [];
+  companyNames: string[] = [];
 
-  constructor(private api:ApicallService, private router:Router){}
+  constructor(private api:ApicallService, private router:Router){
+    
+  }
   
   ngOnInit():void{
     this.api.getpost().subscribe(posts =>{
       this.post =posts;
-      console.log(posts)
-      console.log(this.post)
+      console.log(posts);
+      console.log(this.post);
+      this.vendorCodes = Object.keys(this.post);
+      console.log(this.vendorCodes);
+      Object.keys(this.post).forEach(key => {
+        this.pkgPersonNames.push(this.post[key].supplierDetails.pkgPersonName);
+        this.companyNames.push(this.post[key].supplierDetails.companyName);
+      });
+  
+      console.log(this.pkgPersonNames,this.companyNames)
     })
+
+   
     }
+   
     
     search:string='';
     

@@ -1,0 +1,295 @@
+{
+    "data": {
+      "R12345": {
+        "supplierDetails": {
+          "companyName": "XYZ SYSTEMS LTD",
+          "companyAddress": "Thane",
+          "pkgPersonName": "Sanket Pawar",
+          "email": "Sanket.Pawar@gmail.com",
+          "vendorCode": "R12345",
+          "stateCountry": "MAHARASHTRA, INDIA",
+          "telNo": "Q5",
+          "faxNo": "Q5"
+        },
+        "t2": {
+          "Approval": "Final",
+          "Status": "Recommended",
+          "Date": "28-04-2024"
+        },
+        "t3": {
+          "receiverLocation": "ABC to VGH to TYX",
+          "partDimension": [120, 130, 200],
+          "partNo": 12345678909,
+          "volume": 75000,
+          "part_desc": "R_TRW_1234",
+          "partPerVehicle": 1,
+          "partWeight": 0.38,
+          "modelsApplicable": "Q5"
+        },
+        "imgblock": {
+          "imgpath": [
+            "../assets/images/test.jpg",
+            "../assets/images/test2.jpg"
+          ]
+        },
+        "data1": {
+          "Specifications": [
+            "Density (Qty of parts)",
+            "Packaging Strategy",
+            "Carton Code",
+            "Carton Type(Design)",
+            "Packaging Material Type",
+            "Securement / Closure Type",
+            "Total Loaded Wt. (kg - Full)",
+            "Outside Dimension (L X W X H) (mm)",
+            "Dunnage & Description",
+            "Labels (Quantity / Location)",
+            "Container Ownership"
+          ],
+          "primaryPackaging": ["-", "-", "-", "-", "-", "-", "-", ["-", "-", "-"], ["-", "-"], ["-", "-"], "-"],
+          "secondaryPackaging": ["5", "Returnable", "NA", "Tree Bin Bag", "Tree Bin Bag", "Remarks", "2.19", ["600", "400", "180"], ["Yes", "Xyz"], ["2", "Adjacent Side"], "XYZ"]
+        },
+        "data3": {
+          "Vehicle": ["Pallet Dimension (L X W X H) (mm)", "Sec Packaging per transit modes", "No of Pry Packs per Sec Packs", "Terms", "Hazardous Material Class", "loop Size (for Returnable)", "Life of Returnable Packaging", "Unloading & Loading Responsibility", "Supply at XYZ"],
+          "Closed": [["NA", "NA", "NA"], "NA", "NA", "XY", "NA", "5 Days", "2 Years", "ABCD", "Batch Lot"],
+          "Theoretical": ["76%", "76%", "76%", "76%", ["Compliant (>85%)", "Non-Compliant (<85%)"], "Remarks", " ", " "]
+        },
+        "data4": {
+          "Department": ["packaging Person", "packaging Person", "packaging Person"],
+          "Name": ["Sanket Pawar", "Sanket Pawar", "Sanket Pawar"],
+          "Date": ["23/02/2024", "23/02/2024", "23/02/2024"]
+        }
+      },
+  
+      "R12356": {
+        "supplierDetails": {
+          "companyName": "XYZ SYSTEMS LTD",
+          "companyAddress": "Thane",
+          "pkgPersonName": "Mohammed Kaif",
+          "email": "Mohammed.Kaif@gmail.com",
+          "vendorCode": "R12356",
+          "stateCountry": "MAHARASHTRA, INDIA",
+          "telNo": "Q6",
+          "faxNo": "Q6"
+        },
+        "t2": {
+          "Approval": "Final",
+          "Status": "Recommended",
+          "Date": "28-03-2023"
+        },
+        "t3": {
+          "receiverLocation": "ABC to VGH to TYX",
+          "partDimension": [120, 130, 200],
+          "partNo": 12345678909,
+          "volume": 75000,
+          "part_desc": "R_TRW_1234",
+          "partPerVehicle": 1,
+          "partWeight": 0.38,
+          "modelsApplicable": "Q5"
+        },
+        "imgblock": {
+          "imgpath": ["../assets/images/test.jpg"]
+        },
+        "data1": {
+          "Specifications": [
+            "Density (Qty of parts)",
+            "Packaging Strategy",
+            "Carton Code",
+            "Carton Type(Design)",
+            "Packaging Material Type",
+            "Securement / Closure Type",
+            "Total Loaded Wt. (kg - Full)",
+            "Outside Dimension (L X W X H) (mm)",
+            "Dunnage & Description",
+            "Labels (Quantity / Location)",
+            "Container Ownership"
+          ],
+          "primaryPackaging": ["-", "-", "-", "-", "-", "-", "-", ["-", "-", "-"], ["-", "-"], ["-", "-"], "-"],
+          "secondaryPackaging": ["5", "Returnable", "NA", "Tree Bin Bag", "Tree Bin Bag", "Remarks", "2.19", ["600", "400", "180"], ["Yes", "Xyz"], ["2", "Adjacent Side"], "XYZ"]
+        },
+        "data3": {
+          "Vehicle": ["Pallet Dimension (L X W X H) (mm)", "Sec Packaging per transit modes", "No of Pry Packs per Sec Packs", "Terms", "Hazardous Material Class", "loop Size (for Returnable)", "Life of Returnable Packaging", "Unloading & Loading Responsibility", "Supply at XYZ"],
+          "Closed": [["NA", "NA", "NA"], "NA", "NA", "XY", "NA", "5 Days", "2 Years", "ABCD", "Batch Lot"],
+          "Theoretical": ["76%", "76%", "76%", "76%", ["Compliant (>85%)", "Non-Compliant (<85%)"], "Remarks", " ", " "]
+        },
+        "data4": {
+          "Department": ["packaging Person", "packaging Person", "packaging Person"],
+          "Name": ["Mohammed Kaif", "Mohammed Kaif", "Mohammed Kaif"],
+          "Date": ["23/02/2024", "23/02/2024", "23/02/2024"]
+        }
+      },
+      "R12357": {
+        "supplierDetails": {
+          "companyName": "XYZ SYSTEMS LTD",
+          "companyAddress": "Mumbai",
+          "pkgPersonName": "Mohammed Asif",
+          "email": "Mohammed.Asif@gmail.com",
+          "vendorCode": "R12357",
+          "stateCountry": "MAHARASHTRA, INDIA",
+          "telNo": "Q7",
+          "faxNo": "Q7"
+        },
+        "t2": {
+          "Approval": "Final",
+          "Status": "Recommended",
+          "Date": "28-03-2024"
+        },
+        "t3": {
+          "receiverLocation": "ADC to KGH to FYX",
+          "partDimension": [120, 130, 200],
+          "partNo": 12345678909,
+          "volume": 75000,
+          "part_desc": "R_TRW_1234",
+          "partPerVehicle": 1,
+          "partWeight": 0.38,
+          "modelsApplicable": "Q5"
+        },
+        "imgblock": {
+          "imgpath": ["../assets/images/test.jpg", "../assets/images/test2.jpg"]
+        },
+        "data1": {
+          "Specifications": [
+            "Density (Qty of parts)",
+            "Packaging Strategy",
+            "Carton Code",
+            "Carton Type(Design)",
+            "Packaging Material Type",
+            "Securement / Closure Type",
+            "Total Loaded Wt. (kg - Full)",
+            "Outside Dimension (L X W X H) (mm)",
+            "Dunnage & Description",
+            "Labels (Quantity / Location)",
+            "Container Ownership"
+          ],
+          "primaryPackaging": ["-", "-", "-", "-", "-", "-", "-", ["-", "-", "-"], ["-", "-"], ["-", "-"], "-"],
+          "secondaryPackaging": ["5", "Returnable", "NA", "Tree Bin Bag", "Tree Bin Bag", "Remarks", "2.19", ["600", "400", "180"], ["Yes", "Xyz"], ["2", "Adjacent Side"], "XYZ"]
+        },
+        "data3": {
+          "Vehicle": ["Pallet Dimension (L X W X H) (mm)", "Sec Packaging per transit modes", "No of Pry Packs per Sec Packs", "Terms", "Hazardous Material Class", "loop Size (for Returnable)", "Life of Returnable Packaging", "Unloading & Loading Responsibility", "Supply at XYZ"],
+          "Closed": [["NA", "NA", "NA"], "NA", "NA", "XY", "NA", "5 Days", "2 Years", "ABCD", "Batch Lot"],
+          "Theoretical": ["76%", "76%", "76%", "76%", ["Compliant (>85%)", "Non-Compliant (<85%)"], "Remarks", " ", " "]
+        },
+        "data4": {
+          "Department": ["packaging Person", "packaging Person", "packaging Person"],
+          "Name": ["Mohammed Asif", "Mohammed Asif", "Mohammed Asif"],
+          "Date": ["23/02/2024", "23/02/2024", "23/02/2024"]
+        }
+      },
+  
+      "R12348": {
+        "supplierDetails": {
+          "companyName": "XYZ SYSTEMS LTD",
+          "companyAddress": "Mumbai",
+          "pkgPersonName": "Shubham Pawar",
+          "email": "Shubham.Pawar@gmail.com",
+          "vendorCode": "R12348",
+          "stateCountry": "MAHARASHTRA, INDIA",
+          "telNo": "Q8",
+          "faxNo": "Q8"
+        },
+        "t2": {
+          "Approval": "Final",
+          "Status": "Recommended",
+          "Date": "28-05-2024"
+        },
+        "t3": {
+          "receiverLocation": "ABC to VGH to XYZ",
+          "partDimension": [120, 130, 200],
+          "partNo": 12345678909,
+          "volume": 75000,
+          "part_desc": "R_TRW_1234",
+          "partPerVehicle": 1,
+          "partWeight": 0.38,
+          "modelsApplicable": "Q5"
+        },
+        "imgblock": {
+          "imgpath": ["../assets/images/test.jpg", "../assets/images/test2.jpg"]
+        },
+        "data1": {
+          "Specifications": [
+            "Density (Qty of parts)",
+            "Packaging Strategy",
+            "Carton Code",
+            "Carton Type(Design)",
+            "Packaging Material Type",
+            "Securement / Closure Type",
+            "Total Loaded Wt. (kg - Full)",
+            "Outside Dimension (L X W X H) (mm)",
+            "Dunnage & Description",
+            "Labels (Quantity / Location)",
+            "Container Ownership"
+          ],
+          "primaryPackaging": ["-", "-", "-", "-", "-", "-", "-", ["-", "-", "-"], ["-", "-"], ["-", "-"], "-"],
+          "secondaryPackaging": ["5", "Returnable", "NA", "Tree Bin Bag", "Tree Bin Bag", "Remarks", "2.19", ["600", "400", "180"], ["Yes", "Xyz"], ["2", "Adjacent Side"], "XYZ"]
+        },
+        "data3": {
+          "Vehicle": ["Pallet Dimension (L X W X H) (mm)", "Sec Packaging per transit modes", "No of Pry Packs per Sec Packs", "Terms", "Hazardous Material Class", "loop Size (for Returnable)", "Life of Returnable Packaging", "Unloading & Loading Responsibility", "Supply at XYZ"],
+          "Closed": [["NA", "NA", "NA"], "NA", "NA", "XY", "NA", "5 Days", "2 Years", "ABCD", "Batch Lot"],
+          "Theoretical": ["76%", "76%", "76%", "76%", ["Compliant (>85%)", "Non-Compliant (<85%)"], "Remarks", " ", " "]
+        },
+        "data4": {
+          "Department": ["packaging Person", "packaging Person", "packaging Person"],
+          "Name": ["Shubham Pawar", "Shubham Pawar", "Shubham Pawar"],
+          "Date": ["23/02/2024", "23/02/2024", "23/02/2024"]
+        }
+      },
+  
+      "R12349": {
+        "supplierDetails": {
+          "companyName": "XYZ SYSTEMS LTD",
+          "companyAddress": "Pune",
+          "pkgPersonName": "Yash Pawar",
+          "email": "Yash.Pawar@gmail.com",
+          "vendorCode": "R12349",
+          "stateCountry": "MAHARASHTRA, INDIA",
+          "telNo": "Q9",
+          "faxNo": "Q9"
+        },
+        "t2": {
+            "Approval": "Final",
+            "Status": "Recommended",
+            "Date": "28-06-2024"
+          },
+          "t3": {
+            "receiverLocation": "ABC to VGH to TTX",
+            "partDimension": [120, 130, 200],
+            "partNo": 12345678909,
+            "volume": 75000,
+            "part_desc": "R_TRW_1234",
+            "partPerVehicle": 1,
+            "partWeight": 0.38,
+            "modelsApplicable": "Q5"
+          },
+          "imgblock": {
+            "imgpath": ["../assets/images/test.jpg", "../assets/images/test2.jpg"]
+          },
+          "data1": {
+            "Specifications": [
+              "Density (Qty of parts)",
+              "Packaging Strategy",
+              "Carton Code",
+              "Carton Type(Design)",
+              "Packaging Material Type",
+              "Securement / Closure Type",
+              "Total Loaded Wt. (kg - Full)",
+              "Outside Dimension (L X W X H) (mm)",
+              "Dunnage & Description",
+              "Labels (Quantity / Location)",
+              "Container Ownership"
+            ],
+            "primaryPackaging": ["-", "-", "-", "-", "-", "-", "-", ["-", "-", "-"], ["-", "-"], ["-", "-"], "-"],
+            "secondaryPackaging": ["5", "Returnable", "NA", "Tree Bin Bag", "Tree Bin Bag", "Remarks", "2.19", ["600", "400", "180"], ["Yes", "Xyz"], ["2", "Adjacent Side"], "XYZ"]
+          },
+          "data3": {
+            "Vehicle": ["Pallet Dimension (L X W X H) (mm)", "Sec Packaging per transit modes", "No of Pry Packs per Sec Packs", "Terms", "Hazardous Material Class", "loop Size (for Returnable)", "Life of Returnable Packaging", "Unloading & Loading Responsibility", "Supply at XYZ"],
+            "Closed": [["NA", "NA", "NA"], "NA", "NA", "XY", "NA", "5 Days", "2 Years", "ABCD", "Batch Lot"],
+            "Theoretical": ["76%", "76%", "76%", "76%",["Compliant (>85%)", "Non-Compliant (<85%)"], "Remarks", " ", " "]
+          },
+          "data4": {
+            "Department": ["packaging Person", "packaging Person", "packaging Person"],
+            "Name": ["Yash Pawar", "Yash Pawar", "Yash Pawar"],
+            "Date": ["23/02/2024", "23/02/2024", "23/02/2024"]
+          }
+        }
+      }
+    }
