@@ -12,6 +12,8 @@ import { VendorComponent } from './vendor/vendor.component';
 import { HomeComponent } from './home/home.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ImageviewnewComponent } from './imageviewnew/imageviewnew.component';
+
 
 
 
@@ -21,7 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     VendorComponent,
-    HomeComponent
+    HomeComponent,
+    ImageviewnewComponent
+    
    
   ],
   imports: [

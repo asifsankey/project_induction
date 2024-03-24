@@ -87,4 +87,9 @@ export class VendorComponent implements OnInit {
     this.con=con;
     this.indexno=i;
   }
+
+  navtoimg(i:number){
+    this.indexno = i;
+    this.post[this.vendorCode].imgblock.imgpath[this.indexno]?this.post[this.vendorCode].imgblock.imgpath[this.indexno]:this.defaultImg;
+  }
 }

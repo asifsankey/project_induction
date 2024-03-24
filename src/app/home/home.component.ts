@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApicallService } from '../services/apicall.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { PostservicenService } from '../services/postservicen.service';
 
 
 @Component({
@@ -19,8 +20,17 @@ export class HomeComponent {
   filteredData: string[]=[];
   printingid:string[]=[]
   search:string='';
+  packageId: string ="";
+  personName:string="";
+  comment:string="";
+  
+  datatobeSend:object ={
+      "packageId": this.packageId,
+      "personName": this.personName,
+      "comment":this.comment  
+      }
 
-  constructor(private api:ApicallService, private router:Router,private toastr: ToastrService){
+  constructor(private api:ApicallService, private router:Router,private toastr: ToastrService,private post1:PostservicenService){
    
   }
   
@@ -43,7 +53,16 @@ export class HomeComponent {
    
     }
 
-    saafsafai(){
+    reload1(){
+      this.clearData()
+      Object.keys(this.post).forEach(key => {
+          this.pkgPersonNames.push(this.post[key].supplierDetails.pkgPersonName);
+          this.companyNames.push(this.post[key].supplierDetails.companyName);
+          this.printingid = this.vendorCodes;
+          this.search="";
+      });
+    }
+    clearData(){
         this.printingid=[];
         this.pkgPersonNames = [];
         this.companyNames = [];
@@ -56,7 +75,7 @@ export class HomeComponent {
       });
       if (this.filteredData.length > 0) {
         // Clear previous data
-        this.saafsafai();
+        this.clearData()
         // Push filtered data
         Object.keys(this.post).forEach(key => {
           if (this.filteredData.includes(key)) {
@@ -72,7 +91,7 @@ export class HomeComponent {
        else {
         // Show toaster for data not found
         this.toastr.error('Data not found!', 'Error');
-        this.saafsafai();
+        this.clearData();
       }
     }
     
@@ -103,16 +122,16 @@ export class HomeComponent {
    
     
 
-  supplierDetails={
-    companyName:["XYZ SYSTEMS LTD","XYZ SYSTEMS LTD","GGF SYSTEMS LTD","FSC SYSTEMS LTD","FSC SYSTEMS LTD"],
-    companyAddress:["Thane","Thane","Mumbai","Mumbai","Pune"],
-    pkgPersonName:["Sanket Pawar","Kiran Sinde","Mohammed Asif","Shubham Pawar","Yash Pawar"],
-    email:["Sanket.Pawar@gmail.com","Kiran.Sinde@gmail.com","Mohammed.Asif@gmail.com","Shubham.Pawar@gmail.com","Yash.Pawar@gmail.com"],
-    vendorCode:["R12345","R12356","R12357","R12348","R12349"],
-    stateCountry:["MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA"],
-    telNo:["Q5","Q6","Q7","Q8","Q9"],
-    faxNo:["Q5","Q6","Q7","Q8","Q9"]
-  }
+  // supplierDetails={
+  //   companyName:["XYZ SYSTEMS LTD","XYZ SYSTEMS LTD","GGF SYSTEMS LTD","FSC SYSTEMS LTD","FSC SYSTEMS LTD"],
+  //   companyAddress:["Thane","Thane","Mumbai","Mumbai","Pune"],
+  //   pkgPersonName:["Sanket Pawar","Kiran Sinde","Mohammed Asif","Shubham Pawar","Yash Pawar"],
+  //   email:["Sanket.Pawar@gmail.com","Kiran.Sinde@gmail.com","Mohammed.Asif@gmail.com","Shubham.Pawar@gmail.com","Yash.Pawar@gmail.com"],
+  //   vendorCode:["R12345","R12356","R12357","R12348","R12349"],
+  //   stateCountry:["MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA","MAHARASHTRA, INDIA"],
+  //   telNo:["Q5","Q6","Q7","Q8","Q9"],
+  //   faxNo:["Q5","Q6","Q7","Q8","Q9"]
+  // }
 
   
 
@@ -122,6 +141,53 @@ export class HomeComponent {
     this.router.navigate(['/vendor', vendorCode]);
   }
 
-  
+
+// const data = {
+//   key1: 'value1',
+//   key2: 'value2',
+//   key3: 'value3'
+// };
+
+// this.http.post(url, data).subscribe(response => {
+//   console.log('Response:', response);
+// }, error => {
+//   console.error('Error:', error);
+// });
+
+  // sendData(){
+  //   console.log(this.packageId,this.personName,this.comment);
+  //   const url:string ="http://localhost:4000/review";
+
+  //   this.http.post(url, this.datatobeSend).subscribe(response => {
+  //     console.log('Response:', response);
+  //   }, error => {
+  //     console.error('Error:', error);
+  //   });
+
+    sendData(){
+      this.datatobeSend={
+        "packageId": this.packageId,
+        "personName": this.personName,
+        "comment":this.comment  
+        }
+      this.post1.postData(this.datatobeSend).subscribe({
+        next: (response) => {
+          console.log('POST request successful:', response);
+          // Handle response if needed
+        },
+        error: (error) => {
+          console.error('Error occurred during POST request:', error);
+          // Handle error if needed
+        },
+        complete: () => {
+          console.log("the data is sent successfully")
+          // Handle completion if needed
+        }
+      });
+
+      console.log(this.packageId,this.personName,this.comment);
+    }
+
+  // }
 
 }

@@ -89,7 +89,7 @@
         </div>
           <div class="imgcontainer">
             
-            <div class="imageblock" *ngFor="let i of [0, 1, 2]" (click)="popup1(true,i)">
+            <div class="imageblock" *ngFor="let i of [0, 1, 2]" (click)="navtoimg(i)">
               <div class="imh" c>3.{{i+1}} - Part</div>
               <div class="imb"><img src={{post[vendorCode].imgblock.imgpath[i]?post[vendorCode].imgblock.imgpath[i]:defaultImg}} alt="someimg"></div>
             </div>

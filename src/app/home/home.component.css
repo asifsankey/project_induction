@@ -5,6 +5,7 @@
     background-color: white;
     margin: auto;
     border: 1px solid #D3D3D3;
+    margin-bottom: 8%;
     
 }
 
@@ -96,4 +97,70 @@
     .searchcont button{
         width: 15%;
     }
+}
+
+#xbutton{
+    margin-left: 1%;
+    width: 3%;
+    height: 60%;
+
+}
+
+.postformcont{
+   
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: 1px solid black;
+    
+    
+}
+
+#headp{
+    font-size: 1.3rem;
+    padding-left: 0%;
+    padding-bottom: 3%;
+    font-weight: 700;
+    color: #27292F;
+    display: flex;
+    justify-content: center;
+}
+
+.postformcont p{
+    padding-left: 30%;
+    padding-bottom: 0.5%;
+    padding-top: 3%;
+    font-size: 1rem;
+    color: #2162AC;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.postformcont input{
+    width: 40%;
+    height: 1.3rem;
+}
+
+
+
+.btndiv{
+    display: flex;
+    padding-top: 3%;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    height: 3rem;
+
+}
+
+.btndiv button{
+    height: 60%;
+    width: 60%;
+}
+
+#commentField{
+    height: 4rem;
+    width: 40%;
 }

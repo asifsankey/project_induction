@@ -4,13 +4,16 @@
   <form class="searchcont" ngNativeValidate (ngSubmit)="searchele()">
     <input type="text" placeholder="Enter Package ID" name="search" [(ngModel)]="search" required>
     <button type="submit">Search</button>
+    <button id="xbutton" type="button" (click)="reload1()" >&#8634;</button>
   </form>
-    
+  
   <div class="titl">
     <p>Table of contents</p>
+    
   </div>
+
+
 <div class="preview">
-  
   <div class="col1">
     <div class="hdr">Package ID</div>
     <div class="rows" *ngFor="let x of printingid" (click)="navigateto(x)">
@@ -29,5 +32,20 @@
       {{x}}
     </div>
   </div>
+</div>
+
+<div class="postformcont">
+    <p id="headp">Client Review</p>
+    <p>Enter package ID</p>
+    <input type="text" [(ngModel)]="packageId">
+    <p>Enter person Name</p>
+    <input type="text" [(ngModel)]="personName">
+    <p>Please Enter the review</p>
+    <textarea id="commentField" [(ngModel)]="comment"></textarea>
+    <div class="btndiv">
+    <button type="button" (click)="sendData()">
+        submit
+    </button>
+    </div>
 </div>
 </div>
